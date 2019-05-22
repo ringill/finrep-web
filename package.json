@@ -7,6 +7,7 @@
     "@types/node": "12.0.2",
     "@types/react": "16.8.18",
     "@types/react-dom": "16.8.4",
+    "eslint-plugin-react": "^7.13.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
@@ -16,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "eslint": "eslint src/App.tsx",
+    "eslint-check": "eslint --print-config . | eslint-config-prettier-check"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,5 +35,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.17.1"
   }
 }
