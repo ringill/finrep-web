@@ -3,13 +3,15 @@ module.exports = {
     plugins: [
         '@typescript-eslint',
         'react',
+        'standard',
     ],
     extends: [
+        'standard',
         'plugin:@typescript-eslint/recommended',  // Uses the recommended rules from @typescript-eslint/eslint-plugin
         'plugin:react/recommended',  // Uses the recommended rules from @eslint-plugin-react
-        //'prettier',
         'prettier/@typescript-eslint',
         'prettier/react', // disables react-specific linting rules that conflict with prettier
+        'prettier/standard',
         'plugin:prettier/recommended',  // Enables eslint-plugin-prettier and displays prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
     ],
     parserOptions: {
@@ -44,24 +46,16 @@ module.exports = {
             { avoidEscape: true, allowTemplateLiterals: false }
         ],
         // jsx
-        "react/jsx-max-props-per-line": [
-            "error",
-            { maximum: 1, when: "always" }
-        ],
-        "react/jsx-first-prop-new-line": [
-            "error"
-        ],
-
-        "react/jsx-closing-bracket-location": "off",
-        "react/jsx-closing-tag-location": "off",
-        "react/jsx-curly-spacing": "off",
-        "react/jsx-equals-spacing": "off",
-        "react/jsx-indent": "off",
-        "react/jsx-indent-props": "off",
-        "react/jsx-one-expression-per-line": "off",
-        "react/jsx-space-before-closing": "off",
-        "react/jsx-tag-spacing": "off",
-        "react/jsx-wrap-multilines": "off",
+        // "react/jsx-closing-bracket-location": "off",
+        // "react/jsx-closing-tag-location": "off",
+        // "react/jsx-curly-spacing": "off",
+        // "react/jsx-equals-spacing": "off",
+        // "react/jsx-indent": "off",
+        // "react/jsx-indent-props": "off",
+        // "react/jsx-one-expression-per-line": "off",
+        // "react/jsx-space-before-closing": "off",
+        // "react/jsx-tag-spacing": "off",
+        // "react/jsx-wrap-multilines": "off",
         // typescript
         '@typescript-eslint/restrict-plus-operands': 'warn',
         '@typescript-eslint/interface-name-prefix': [
@@ -76,8 +70,8 @@ module.exports = {
             'warn',
             { allowExpressions: true, allowTypedFunctionExpressions: true }
         ],
-        '@typescript-eslint/no-non-null-assertion': 'off',
-        '@typescript-eslint/no-use-before-define': 'off',
+        // '@typescript-eslint/no-non-null-assertion': 'off',
+        // '@typescript-eslint/no-use-before-define': 'off',
         '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
         '@typescript-eslint/no-for-in-array': 'error'
     },
