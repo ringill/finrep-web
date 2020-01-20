@@ -1,29 +1,30 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React from 'react';
+import logo from './logo.svg';
+import 'antd/dist/antd.less';
+import { MenuComponent } from "./component/Menu/Menu";
+import { Layout } from 'antd';
 
-interface IZ<Type> {
-  url: string;
-  z: number;
-}
-
-const z = {
-  a: "1",
-  b: "2"
-};
+const { Header, Content, Footer, Sider } = Layout;
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <div>
-        <p>Greetings, traveler! Sign up today!</p>
-      </div>
-
-      <header className="App-header">
-        <img
-          src={logo}
-          className="App-logo"
-          alt="logo" />
+    <Layout>
+      <Sider
+        style={{
+          overflow: 'auto',
+          height: '100vh',
+          position: 'fixed',
+          left: 0,
+        }}
+      >
+        <MenuComponent />
+      </Sider>
+      <Layout style={{ marginLeft: 200 }}>
+        <Header style={{ background: '#fff', padding: 0 }} />
+        <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
+          <img src={logo} className="App-logo" alt="logo" />
+          {/* <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -31,12 +32,16 @@ const App: React.FC = () => {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           Learn React
         </a>
-      </header>
-    </div>
+      </header> */}
+        </Content>
+        <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+      </Layout>
+    </Layout>
   );
-};
+}
 
 export default App;
