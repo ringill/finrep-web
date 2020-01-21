@@ -2,8 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import 'antd/dist/antd.less';
 import ruRU from "antd/es/locale/ru_RU";
-import { MenuComponent } from "./component/Menu/Menu";
+import { MenuComponent } from "./component/Menu";
 import { ConfigProvider, Layout, Button, DatePicker } from 'antd';
+import { OutputComponent } from "./component/Output";
 
 const { Content, Footer, Sider } = Layout;
 
@@ -24,7 +25,8 @@ const App: React.FC = () => {
       <Layout style={{ marginLeft: 200 }}>
         <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
           <DatePicker />
-          <img src={logo} className="App-logo" alt="logo" />
+          {/* <img src={logo} className="App-logo" alt="logo" /> */}
+          <OutputComponent />
           <Button>Button</Button>
           {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
