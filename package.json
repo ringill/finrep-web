@@ -3,17 +3,36 @@
   "version": "1.0.0",
   "scripts": {
     "client": "cd client && yarn start",
-    "server": "nodemon --inspect server.js",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "start": "node server.js",
-    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "server": "nodemon --inspect dist/server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn run client\"",
+    "start": "node src/server.js",
+    "build": "yarn run build-ts && yarn run lint",
+    "serve": "node dist/server.js",
+    "watch-node": "nodemon dist/server.js",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node,Client\" -c \"yellow.bold,cyan.bold,green.bold\" \"yarn run watch-ts\" \"yarn run watch-node\" \"yarn run client\"",
+    "test": "jest --forceExit --coverage --verbose",
+    "watch-test": "yarn run test -- --watchAll",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "lint": "tsc --noEmit",
+    "debug": "yarn run build && yarn run watch-debug",
+    "serve-debug": "nodemon --inspect dist/server.js",
+    "watch-debug": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node,Client\" -c \"yellow.bold,cyan.bold,green.bold\" \"yarn run watch-ts\" \"yarn run serve-debug\" \"yarn run client\""
   },
   "dependencies": {
+    "@types/errorhandler": "^0.0.32",
     "body-parser": "^1.19.0",
+    "errorhandler": "^1.5.1",
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@types/body-parser": "^1.17.1",
+    "@types/express": "^4.17.2",
+    "@types/express-session": "^1.15.16",
+    "@types/node": "^13.1.8",
     "concurrently": "^5.0.2",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.7.5"
   }
 }

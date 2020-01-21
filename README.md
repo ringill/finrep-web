@@ -7,6 +7,12 @@
 [https://github.com/Microsoft/vscode-recipes/tree/master/nodemon]https://github.com/Microsoft/vscode-recipes/tree/master/nodemon
 [https://code.visualstudio.com/docs/nodejs/debugging-recipes#_debug-serverside-javascript-in-nodejs]Think about tests
 
+## Server-side typescript
+[https://medium.com/@ramandeep.singh.1983/step-by-step-setting-up-a-node-js-server-in-typescript-c601c066bc57]https://medium.com/@ramandeep.singh.1983/step-by-step-setting-up-a-node-js-server-in-typescript-c601c066bc57
+
+and
+
+[https://github.com/microsoft/TypeScript-Node-Starter#typescript--node]https://github.com/microsoft/TypeScript-Node-Starter#typescript--node
 
 ## Pack it in Docker
 
