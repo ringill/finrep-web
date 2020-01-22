@@ -1,3 +1,18 @@
+
+# Dev Tools
+
+## Node.js
+
+## Yarn
+
+## MySQL
+
+## Liquibase
+version: mysql-installer-web-community-5.7.29.0.msi
+use driver: mysql-connector-java-8.0.19.zip
+
+# Knowledge
+
 ## Config create-react-app + nodejs backend (express based)
 
 [https://www.freecodecamp.org/news/how-to-make-create-react-app-work-with-a-node-backend-api-7c5c48acb1b0/]https://www.freecodecamp.org/news/how-to-make-create-react-app-work-with-a-node-backend-api-7c5c48acb1b0/
