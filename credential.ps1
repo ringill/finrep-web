@@ -1,4 +1,4 @@
-param([string]$action = "apply", [string]$jsonFile = "credential.json")
+param([string]$action = "deny", [string]$jsonFile = "credential.json")
 
 function ReplaceStringInFile ([string]$filePath, [string]$find, [string]$replace) {
   $tempFilePath = "$filePath.tmp"
@@ -8,12 +8,12 @@ function ReplaceStringInFile ([string]$filePath, [string]$find, [string]$replace
 }
 
 $currentLocation = Get-Location
-$workDir = Join-Path $currentLocation -ChildPath "../"
+$workDir = $currentLocation
 $altSegment = "deny"
 $exitCode = 1
 
-if (!(($action -eq "apply") -or ($action -eq "deny"))) {
-  Write-Host "Disallowed value: '$action' . Allow only: 'apply' or 'deny'"
+if (!(($action -eq "allow") -or ($action -eq "deny"))) {
+  Write-Host "Disallowed value: '$action' . Allow only: 'allow' or 'deny'"
   exit $exitCode
 }
 if (!(Test-Path $jsonFile)) {
@@ -21,10 +21,10 @@ if (!(Test-Path $jsonFile)) {
   exit $exitCode
 }
 
-if ($action -eq "apply") {
+if ($action -eq "allow") {
   $altSegment = "deny"
 } else {
-  $altSegment = "apply"
+  $altSegment = "allow"
 }
 
 try {

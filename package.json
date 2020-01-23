@@ -1,6 +1,9 @@
 {
   "name": "finrep",
   "version": "1.0.0",
+  "author": "ringill",
+  "license": "ISC",
+  "private": true,
   "scripts": {
     "client": "cd client && yarn start",
     "server": "nodemon --inspect dist/server.js",
@@ -22,8 +25,10 @@
   "dependencies": {
     "@types/errorhandler": "^0.0.32",
     "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
     "errorhandler": "^1.5.1",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pdfreader": "^1.0.6"
   },
   "devDependencies": {
     "@types/body-parser": "^1.17.1",
