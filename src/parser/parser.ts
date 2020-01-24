@@ -1,6 +1,4 @@
 import pdfreader from 'pdfreader';
-import { pdfFileName } from "../config";
-const filename = pdfFileName;
 
 const nbCols = 2;
 const cellPadding = 40; // each cell is padded to fit 40 characters
@@ -20,10 +18,10 @@ const renderMatrix = (matrix: any) => (matrix || [])
     .join(' | ')
   ).join('\n');
 
-export const parse = () => {
+export const parse = (filename: string) => {
   let table = new pdfreader.TableParser();
 
-  new pdfreader.PdfReader().parseFileItems(filename, function (err: any, item: { page: any; text: any; }) {
+  new pdfreader.PdfReader().parseFileItems(filename, (err: any, item: { page: any; text: any; }) => {
     if (!item || item.page) {
       // end of file, or page
       console.log(renderMatrix(table.getMatrix()));
@@ -34,4 +32,6 @@ export const parse = () => {
       table.processItem(item, columnQuantitizer(item));
     }
   });
+
+  return table;
 };
