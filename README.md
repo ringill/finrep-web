@@ -5,6 +5,7 @@
 - MySQL
 ### Liquibase
 version: mysql-installer-web-community-5.7.29.0.msi
+
 use driver: mysql-connector-java-8.0.19.zip
 
 # Knowledge
@@ -26,9 +27,18 @@ use driver: mysql-connector-java-8.0.19.zip
 ## Tests
 - [Testing TypeScript Node with Jest](https://medium.com/@admin_86118/testing-typescript-node-with-jest-6bf5db18119c)
 - [Debugging tests in VS Code](https://github.com/microsoft/vscode-recipes/tree/master/debugging-jest-tests)
+- [Testing Asynchronous Code](https://jestjs.io/docs/en/next/asynchronous)
 
 ## Pack it in Docker
 - [Create React App + Docker — multi-stage build example. Let’s talk about artifacts!](https://medium.com/@shakyShane/lets-talk-about-docker-artifacts-27454560384f)
 
-## Parse PDF
+## Parse .pdf
 - [How to parse PDFs at scale in NodeJS: what to do and what not to do](https://www.freecodecamp.org/news/how-to-parse-pdfs-at-scale-in-nodejs-what-to-do-and-what-not-to-do-541df9d2eec1/)
+
+## Save .csv
+- [Reading and Writing CSV Files with Node.js](https://stackabuse.com/reading-and-writing-csv-files-with-node-js/)
+
+## File manipulation
+- [Node.js Move and Copy file](https://coursesweb.net/nodejs/move-copy-file)
+- [Node.js file system](https://nodejs.org/api/fs.html)
+- [Node.js path](https://nodejs.org/api/path.html#path_path_basename_path_ext)

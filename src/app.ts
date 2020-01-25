@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import path from 'path';
-import { parse } from "./parser/parser";
+import { parse } from "./pdfParser/parser";
 import * as sourceMaps from "source-map-support";
 
 sourceMaps.install();
@@ -18,7 +18,7 @@ app.get('/api/hello', (req, res) => {
 });
 
 app.get('/api/parse', (req, res) => {
-  parse();
+  parse("");
   res.send({ express: "parsed" });
 });
 
@@ -42,7 +42,3 @@ if (process.env.NODE_ENV === 'production') {
 // app.listen(port, () => console.log(`Listening on port ${port}`));
 
 export default app;
-
-export const App = {
-  some: "stuff"
-};
