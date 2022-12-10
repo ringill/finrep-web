@@ -33,7 +33,7 @@
     "csv-writer": "^1.6.0",
     "dotenv": "^8.2.0",
     "errorhandler": "^1.5.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "pdfreader": "^1.0.6",
     "uuid": "^3.4.0"
   },
